@@ -1,1 +1,389 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+@import './sizing.scss';
+$danger :#D54828;
+$primary:#0073ff;
+$success:#00ae00;
+$warning:#ffb120;
+$dark   :#454545;
+$light  :#ffffff;
+$gr-bg-1: linear-gradient(to left, rgba(165, 22, 222, 0.866), rgba(93, 47, 209, 0.866), rgba(22, 22, 222, 0.866));
+$gr-bg-2: linear-gradient(to left, rgba(255, 200, 105, 0.866), rgb(255, 164, 67), rgb(255, 148, 25));
+$gr-bg-3: linear-gradient(to left, rgb(72, 186, 60), rgb(41, 169, 27), rgb(15, 147, 0));
+$gr-bg-4: linear-gradient(to left, rgba(18, 212, 255, 0.866), rgba(0, 200, 255, 0.866), rgba(0, 179, 255, 0.866));
+$gr-bg-5: linear-gradient(to left, rgba(213, 72, 40, 0.866), rgba(205, 44, 8, 0.866), rgba(176, 32, 0, 0.866));
+
+.ripple {
+  background-color: rgba(255, 255, 255, 0.551);
+  border-radius   : 50%;
+  position        : absolute;
+  animation       : rippleWave 0.6s linear;
+  transform       : scale(0);
+}
+
+@keyframes rippleWave {
+  to {
+    transform: scale(2.5);
+  }
+}
+
+.shadow-main {
+  box-shadow: 0px 3px 8px -2px rgba(0, 0, 0, 0.522);
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  // display: none;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+table {
+  thead tr {
+    background-color: #DDDEE2;
+    align-items     : center;
+
+    th {
+      vertical-align: middle;
+      font-size     : 0.8rem;
+      font-weight   : 600;
+      padding       : 0rem 0.5rem !important;
+    }
+  }
+
+  tbody tr td {
+    font-size : 0.7rem;
+    text-align: center;
+  }
+}
+
+@function rippleHover($bgColor) {
+  @return $bgColor radial-gradient(circle, transparent 1%, $bgColor 1%) center/15000%;
+}
+
+.m-btn {
+  display         : flex;
+  border          : none;
+  outline         : none;
+  padding         : 5px 8px;
+  width           : 100%;
+  margin-bottom   : 5px;
+  border-radius   : 4px;
+  background-color: transparent;
+  color           : #88878F;
+  font-size       : 0.9rem;
+
+  i {
+    padding: 0px 10px;
+  }
+
+  &:hover {
+    background-color: #ffffff;
+    color           : #000000;
+    box-shadow      : 0px 2px 5px -3px #000000;
+  }
+}
+
+.m-btn-extras {
+  padding            : 7px 10px !important;
+  align-items        : center;
+  justify-content    : center;
+  width              : auto !important;
+  box-shadow         : 0px 2px 5px -3px #000000;
+  background-position: center;
+  transition         : background 0.8s;
+
+  i {
+    padding: 0px 5px;
+  }
+}
+
+.m-btn-white {
+  @extend .m-btn;
+  @extend .m-btn-extras;
+  background-color: $light;
+  color           : $dark;
+  text-decoration : none !important;
+
+  &:hover {
+    background: rippleHover(#f7f7f7f7);
+  }
+
+  &:active {
+    background-color: #e4e4e4;
+    background-size : 100%;
+    transition      : background 0s;
+  }
+}
+
+.m-btn-danger {
+  @extend .m-btn;
+  @extend .m-btn-extras;
+  background-color: $danger;
+  color           : $light;
+
+  &:hover {
+    background: rippleHover(#f45430);
+    color     : $light;
+  }
+
+  &:active {
+    background-color: #bc3112;
+    background-size : 100%;
+    transition      : background 0s;
+  }
+}
+
+.m-btn-warning {
+  @extend .m-btn;
+  @extend .m-btn-extras;
+  background-color: $warning;
+  color           : $light;
+
+  &:hover {
+    background: rippleHover(#ffbc3f);
+    color     : $light;
+  }
+
+  &:active {
+    background-color: #e39b16;
+    background-size : 100%;
+    transition      : background 0s;
+  }
+}
+
+.m-btn-success {
+  @extend .m-btn;
+  @extend .m-btn-extras;
+  background-color: $success;
+  color           : $light;
+
+  &:hover {
+    background: rippleHover(#0ac40a);
+    color     : $light;
+  }
+
+  &:active {
+    background-color: #009d00;
+    background-size : 100%;
+    transition      : background 0s;
+  }
+}
+
+.m-btn-primary {
+  @extend .m-btn;
+  @extend .m-btn-extras;
+  background-color: $primary;
+  color           : $light;
+
+  &:hover {
+    background: rippleHover(#2688ff);
+    color     : $light;
+  }
+
+  &:active {
+    background-color: #006bef;
+    background-size : 100%;
+    transition      : background 0s;
+  }
+}
+
+.m-btn-dark {
+  @extend .m-btn;
+  @extend .m-btn-extras;
+  background-color: $dark;
+  color           : $light;
+
+  &:hover {
+    background: rippleHover(#4f4f4f);
+    color     : $light;
+  }
+
+  &:active {
+    background-color: #2d2d2d;
+    background-size : 100%;
+    transition      : background 0s;
+  }
+}
+
+.router-link-active {
+  background-color: #ffffff !important;
+  color           : $danger !important;
+  box-shadow      : 0px 2px 5px -2px $danger !important;
+}
+
+.m-btn--white-danger {
+  &:hover {
+    background-color: #ffffff !important;
+    color           : $danger !important;
+
+    &:not(:hover) {
+      box-shadow: 0px 2px 5px -2px $danger !important;
+    }
+  }
+}
+
+.m-btn--danger {
+  background-color: $danger !important;
+  color           : #ffffff !important;
+  box-shadow      : 0px 2px 5px -3px $dark !important;
+}
+
+.m-btn--white-primary {
+  &:hover {
+    background-color: #ffffff !important;
+    color           : $primary !important;
+    box-shadow      : 0px 2px 5px -2px $primary !important;
+  }
+}
+
+.m-btn--primary {
+  background-color: $primary !important;
+  color           : #ffffff !important;
+  box-shadow      : 0px 2px 5px -3px $dark !important;
+}
+
+.m-btn--white-success {
+  &:hover {
+    background-color: #ffffff !important;
+    color           : $success !important;
+    box-shadow      : 0px 2px 5px -2px $success !important;
+  }
+}
+
+.m-btn--success {
+  background-color: $success !important;
+  color           : #ffffff !important;
+  box-shadow      : 0px 2px 5px -3px $dark !important;
+}
+
+.m-btn--white-warning {
+  &:hover {
+    background-color: #ffffff !important;
+    color           : $warning !important;
+    box-shadow      : 0px 2px 5px -2px $warning !important;
+  }
+}
+
+.m-btn--warning {
+  background-color: $warning !important;
+  color           : #ffffff !important;
+  box-shadow      : 0px 2px 5px -3px $dark !important;
+}
+
+
+.s-btn-sm {
+  padding         : 0.3rem 0.6rem;
+  border          : 1px solid #d7d7d7;
+  outline         : none;
+  background-color: white;
+  border-radius   : 2px;
+  color           : #455370;
+
+  &:hover {
+    background-color: #f4f4f4;
+  }
+
+  &:focus,
+  :active {
+    border: 1px solid #F1A501;
+  }
+}
+
+.m-btn-sm {
+  display      : flex;
+  border       : none;
+  outline      : none;
+  padding      : 10px 10px;
+  margin       : 3px;
+  border-radius: 3px;
+  box-shadow   : 0px 2px 5px -2px #000000;
+  font-size    : 0.9rem;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.m-btn-sm-mini {
+  @extend .m-btn-sm;
+  padding   : 6px 6px !important;
+  font-size : 0.7rem !important;
+  box-shadow: 0px 2px 5px -2px #0000008a !important;
+}
+
+.m-btn-sm-mini-white {
+  @extend .m-btn-sm-mini;
+  background-color: $light;
+  color           : $dark;
+}
+
+.m-btn-sm-mini-danger {
+  @extend .m-btn-sm-mini;
+  background-color: $danger;
+  color           : $light;
+}
+
+.m-btn-sm-mini-success {
+  @extend .m-btn-sm-mini;
+  background-color: $success;
+  color           : $light;
+}
+
+.m-btn-sm-mini-primary {
+  @extend .m-btn-sm-mini;
+  background-color: $primary;
+  color           : $light;
+}
+
+.m-btn-sm-mini-warning {
+  @extend .m-btn-sm-mini;
+  background-color: $warning;
+  color           : $light;
+}
+
+.m-btn-sm-white {
+  @extend .m-btn-sm;
+  background-color: $light;
+  color           : $dark;
+}
+
+.m-btn-sm-danger {
+  @extend .m-btn-sm;
+  background-color: $danger !important;
+  color           : $light !important;
+}
+
+.m-btn-sm-success {
+  @extend .m-btn-sm;
+  background-color: $success !important;
+  color           : $light !important;
+}
+
+.m-btn-sm-warning {
+  @extend .m-btn-sm;
+  background-color: $warning !important;
+  color           : $light !important;
+}
+
+.m-btn-sm-primary {
+  @extend .m-btn-sm;
+  background-color: $primary !important;
+  color           : $light !important;
+}

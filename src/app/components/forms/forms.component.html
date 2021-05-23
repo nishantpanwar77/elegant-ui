@@ -1,0 +1,30 @@
+<app-breadcrumb [pathOne]="'Forms'"></app-breadcrumb>
+<div class="m-2 p-3 card border-0 shadow-main">
+  <form [formGroup]="customForm">
+    <div class="row">
+      <div class="col-4 mb-3">
+        <div class="dropdownMenu" appSelect (offClick)="$event" tabindex="0">
+          <div class="selectize-input">
+            <input class="selectField" formControlName="mySelect" placeholder="Select"
+              value="{{customForm.value.mySelect}}" (focus)="checkFocus()" type="text" autocomplete="nope">
+          </div>
+          <ul class="dropdown">
+            <li *ngFor="let item of _dummy_drop_data" [ngClass]="{'li-active':customForm.value.mySelect===item.name}"
+              (click)="customForm.value.mySelect=item.name">{{item.name}}</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-4 mb-3">
+        <input class="inputField" formControlName="myInput" type="text" autocomplete="nope" placeholder="Input">
+      </div>
+      <div class="col-8 mb-3">
+        <textarea class="inputField" formControlName="myTextarea" type="text" autocomplete="nope" rows="5"
+          placeholder="Textarea"></textarea>
+      </div>
+      <div class="col-8 mb-3"></div>
+    </div>
+    <div class="d-flex">
+      <button class="m-btn-white mr-2" (click)="clickFormData()">Submit</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,136 @@
+$danger : #ff0000;
+$primary: #007bff;
+$dark   : #000000;
+$light  : #ffffff;
+
+.fieldClass {
+  border-radius       : 6px;
+  padding             : 0.5rem 0.7rem;
+  width               : 100%;
+  border              : 1px solid #ffffff;
+  background          : transparent;
+  color               : #707070;
+  font-size           : 0.8rem;
+  box-shadow          : 0px 1px 5px -3px black;
+  writing-mode        : horizontal-tb !important;
+  text-rendering      : auto;
+  letter-spacing      : normal;
+  word-spacing        : normal;
+  text-transform      : none;
+  text-indent         : 0px;
+  text-shadow         : none;
+  display             : inline-block;
+  text-align          : start;
+  appearance          : auto;
+  -webkit-rtl-ordering: logical;
+  margin              : 0em;
+}
+
+.inputField {
+  @extend .fieldClass;
+
+  &:focus {
+    outline: none;
+    border : 1px solid $primary !important;
+    transition: border 0.3s;
+  }
+
+  &:invalid {
+    border: 1px solid $danger !important;
+  }
+}
+
+.dropdownMenu {
+  position: relative;
+  outline : none;
+  border  : 1px solid white !important;
+
+  &:focus {
+    outline      : none;
+    border       : 1px solid $primary !important;
+    border-radius: 6px;
+  }
+}
+
+.dropdown-visible .selectize-input:after {
+  transform: rotate(180deg);
+  z-index  : inherit;
+}
+
+.selectize-input:after {
+  content : "\25bc";
+  position: absolute;
+  color   : #e1e1e1;
+  right   : 5px;
+  z-index : 10;
+  top     : 6px;
+  cursor  : pointer;
+}
+
+.selectField {
+  @extend .fieldClass;
+
+  &:focus {
+    outline   : none;
+    border : 1px solid $primary !important;
+    cursor    : pointer;
+    transition: border 0.3s;
+
+    .dropdown {
+      display: block;
+    }
+  }
+
+  &:active {
+    outline: none;
+    cursor : pointer;
+  }
+
+  &:invalid {
+    border: 1px solid $danger !important;
+  }
+}
+
+.dropdown-visible .dropdown {
+  display: block !important;
+}
+
+.dropdown-invisible .dropdown {
+  display: none !important;
+}
+
+.dropdownMenu .dropdown {
+  display        : none;
+  position       : absolute;
+  top            : 92%;
+  left           : 0;
+  margin         : 0;
+  padding        : 0;
+  width          : 100%;
+  list-style     : none;
+  font-size      : 0.8rem;
+  background     : #fff;
+  border         : 1px solid #ffffff;
+  border-radius  : 0px 0px 6px 6px;
+  box-shadow     : 0px 2px 5px -4px black;
+  background-clip: padding-box;
+  max-height     : 200px;
+  overflow       : auto !important;
+  z-index        : 2;
+}
+
+.dropdown>:hover {
+  background: #e9ecef;
+  color     : $dark;
+  transition: background 0.1s;
+}
+
+.li-active {
+  background: $danger;
+  color     : $light;
+}
+
+.dropdownMenu .dropdown>* {
+  padding: 7px 15px;
+  cursor : pointer;
+}

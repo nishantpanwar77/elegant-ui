@@ -1,0 +1,137 @@
+<app-breadcrumb [pathOne]="'Dashboard'"></app-breadcrumb>
+<div class="row mb-2">
+  <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+    <div class="card p-3 border-0 mb-3 shadow-main gr-bg-1">
+      <div class="card-content">
+        <h6>Card1</h6>
+        <i class="fa fa-line-chart"></i>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+    <div class="card p-3 border-0 mb-3 shadow-main gr-bg-2">
+      <div class="card-content">
+        <h6>Card2</h6>
+        <i class="fa fa-pie-chart"></i>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+    <div class="card p-3 border-0 mb-3 shadow-main gr-bg-3">
+      <div class="card-content">
+        <h6>Card3</h6>
+        <i class="fa fa-signal"></i>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+    <div class="card p-3 border-0 mb-3 shadow-main gr-bg-4">
+      <div class="card-content">
+        <h6>Card4</h6>
+        <i class="fa fa-bar-chart"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="mb-2 col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+    <div class="card p-3 border-0 mb-3 shadow-main">
+      <canvas baseChart [datasets]="barChartData" [labels]="mbarChartLabels" [options]="barChartOptions"
+        [colors]="barChartColors" [legend]="barChartLegend" [chartType]="'bar'"></canvas>
+    </div>
+  </div>
+  <div class="mb-2 col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+    <div class="card p-3 border-0 mb-3 shadow-main">
+      <canvas baseChart [datasets]="barChartData" [labels]="mbarChartLabels" [options]="barChartOptions"
+        [colors]="lineChartColors" [legend]="barChartLegend" [chartType]="'line'"></canvas>
+    </div>
+  </div>
+  <div class="mb-2 col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
+    <div class="card p-3 border-0 my-3 shadow-main">
+      <div class="heading raised">
+        <h6>Weekly Analysis</h6>
+      </div>
+      <div class="main-area mt-2">
+        <div class="list p-2">
+          <img src="../../../assets/images/man.svg" alt="avatar">
+          <span class="px-1">Lorem ipsum dolor sit amet consectetur elit. Maxime mollitia...</span>
+          <div class="d-flex">
+            <button class="m-btn-sm-mini-white ml-2"><i class="fa fa-external-link"></i></button>
+            <button class="m-btn-sm-mini-danger ml-2"><i class="fa fa-trash"></i></button>
+          </div>
+        </div>
+        <div class="list p-2">
+          <img src="../../../assets/images/girl.svg" alt="avatar">
+          <span class="px-1">Lorem ipsum dolor sit amet consectetur elit. Maxime mollitia...</span>
+          <div class="d-flex">
+            <button class="m-btn-sm-mini-white ml-2"><i class="fa fa-external-link"></i></button>
+            <button class="m-btn-sm-mini-danger ml-2"><i class="fa fa-trash"></i></button>
+          </div>
+        </div>
+
+        <div class="list p-2">
+          <img src="../../../assets/images/man.svg" alt="avatar">
+          <span class="px-1">Lorem ipsum dolor sit amet consectetur elit. Maxime mollitia...</span>
+          <div class="d-flex">
+            <button class="m-btn-sm-mini-white ml-2"><i class="fa fa-external-link"></i></button>
+            <button class="m-btn-sm-mini-danger ml-2"><i class="fa fa-trash"></i></button>
+          </div>
+        </div>
+        <div class="list p-2">
+          <img src="../../../assets/images/girl.svg" alt="avatar">
+          <span class="px-1">Lorem ipsum dolor sit amet consectetur elit. Maxime mollitia...</span>
+          <div class="d-flex">
+            <button class="m-btn-sm-mini-white ml-2"><i class="fa fa-external-link"></i></button>
+            <button class="m-btn-sm-mini-danger ml-2"><i class="fa fa-trash"></i></button>
+          </div>
+        </div>
+
+        <div class="list p-2">
+          <img src="../../../assets/images/man.svg" alt="avatar">
+          <span class="px-1">Lorem ipsum dolor sit amet consectetur elit. Maxime mollitia...</span>
+          <div class="d-flex">
+            <button class="m-btn-sm-mini-white ml-2"><i class="fa fa-external-link"></i></button>
+            <button class="m-btn-sm-mini-danger ml-2"><i class="fa fa-trash"></i></button>
+          </div>
+        </div>
+        <div class="list p-2">
+          <img src="../../../assets/images/girl.svg" alt="avatar">
+          <span class="px-1">Lorem ipsum dolor sit amet consectetur elit. Maxime mollitia...</span>
+          <div class="d-flex">
+            <button class="m-btn-sm-mini-white ml-2"><i class="fa fa-external-link"></i></button>
+            <button class="m-btn-sm-mini-danger ml-2"><i class="fa fa-trash"></i></button>
+          </div>
+        </div>
+
+        <div class="list p-2">
+          <img src="../../../assets/images/man.svg" alt="avatar">
+          <span class="px-1">Lorem ipsum dolor sit amet consectetur elit. Maxime mollitia...</span>
+          <div class="d-flex">
+            <button class="m-btn-sm-mini-white ml-2"><i class="fa fa-external-link"></i></button>
+            <button class="m-btn-sm-mini-danger ml-2"><i class="fa fa-trash"></i></button>
+          </div>
+        </div>
+        <div class="list p-2">
+          <img src="../../../assets/images/girl.svg" alt="avatar">
+          <span class="px-1">Lorem ipsum dolor sit amet consectetur elit. Maxime mollitia...</span>
+          <div class="d-flex">
+            <button class="m-btn-sm-mini-white ml-2"><i class="fa fa-external-link"></i></button>
+            <button class="m-btn-sm-mini-danger ml-2"><i class="fa fa-trash"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mb-2 col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
+    <div class="card p-3 border-0 my-3 shadow-main">
+      <div class="heading raised">
+        <h6>Weekly Analysis Chart</h6>
+      </div>
+      <div class="mt-2">
+        <canvas baseChart [datasets]="barChartData" [labels]="mbarChartLabels" [options]="barChartOptions"
+          [colors]="lineChartColors" [legend]="barChartLegend" [chartType]="'radar'"></canvas>
+      </div>
+    </div>
+  </div>
+</div>

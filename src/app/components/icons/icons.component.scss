@@ -1,0 +1,100 @@
+.heading {
+  background-color: #D54828;
+  color           : white;
+  width           : 25%;
+  text-align      : center;
+  border-radius   : 5px;
+  position        : absolute;
+  transform       : translateY(-40px);
+  padding         : 0.5rem 0.7rem 0rem 0.7rem;
+}
+
+.i-text-btn {
+  opacity         : 0;
+  margin-top      : 0.2rem;
+  margin-left     : 0.45rem;
+  border          : 0;
+  outline         : none;
+  background-color: transparent;
+  text-align      : center;
+
+  span {
+    font-size: 1rem;
+  }
+}
+
+.icon-wrapper {
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  background-color: #ffffff;
+  height          : 40px;
+  width           : 40px;
+  border-radius   : 50%;
+}
+
+.raised {
+  box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%) !important;
+}
+
+
+.main-wrapper:hover {
+  .i-text-btn {
+    opacity: 1;
+  }
+}
+
+.i-dark {
+  background-color: #cfcfcf;
+  color           : black;
+}
+
+.i-danger {
+  background-color: #e2040426 !important;
+  color           : #e20404 !important;
+}
+
+.i-primary {
+  background-color: #2e31e926 !important;
+  color           : #2e31e9 !important;
+}
+
+.i-success {
+  background-color: #33c90126 !important;
+  color           : #33c901 !important;
+}
+
+.i-warning {
+  background-color: #ffab2e26 !important;
+  color           : #ffab2e !important;
+}
+
+.i-violet {
+  background-color: #a920ff26 !important;
+  color           : #9d00ff !important;
+}
+
+.i-yellow {
+  background-color: #ffe10026 !important;
+  color           : #ffe100 !important;
+}
+
+.i-brown {
+  background-color: #a52a2a26 !important;
+  color           : #a52a2a !important;
+}
+
+.i-pink {
+  background-color: #ff00f726 !important;
+  color           : #ff00f7 !important;
+}
+
+.i-darkcyan {
+  background-color: #008b8b26 !important;
+  color           : #008b8b !important;
+}
+
+.i-light-blue {
+  background-color: #00c8ff26 !important;
+  color           : #00c8ff !important;
+}

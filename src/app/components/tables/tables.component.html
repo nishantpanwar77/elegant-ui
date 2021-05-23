@@ -1,0 +1,46 @@
+<app-breadcrumb [pathOne]="'Tables'"></app-breadcrumb>
+<div class="d-flex align-items-center mb-3">
+  <h6>Data Table</h6>
+  <span class="spacer"></span>
+  <button class="m-btn-white ml-2"><i class="fa fa-plus"></i>Add</button>
+  <button class="m-btn-white ml-2"><i class="fa fa-download"></i>Download</button>
+</div>
+<div class="table-responsive">
+  <table class="table bg-white table-sm">
+    <thead>
+      <tr>
+        <th>S.No</th>
+        <th>School Id</th>
+        <th>School Name</th>
+        <th>City</th>
+        <th>Administrator</th>
+        <th>Primary Faculty</th>
+        <th>Secondary Faculty</th>
+        <th>Total Batch</th>
+        <th>Pending Sessions</th>
+        <th>Cancelled Sessions</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of tableData; let i=index">
+        <td>{{i+1}}</td>
+        <td>{{item.schoolId}}</td>
+        <td>{{item.schoolName}}</td>
+        <td>{{item.city}}</td>
+        <td>{{item.admin}}</td>
+        <td class="text-center" [ngClass]="{'text-danger':item.priFaculty>0,'text-secondary':item.priFaculty==0}">{{item.priFaculty}}</td>
+        <td class="text-center" [ngClass]="{'text-danger':item.secFaculty>0,'text-secondary':item.secFaculty==0}">{{item.secFaculty}}</td>
+        <td class="text-center" [ngClass]="{'text-danger':item.totalBatch>0,'text-secondary':item.totalBatch==0}">{{item.totalBatch}}</td>
+        <td class="text-center" [ngClass]="{'text-danger':item.pendingSess>0,'text-secondary':item.pendingSess==0}">{{item.pendingSess}}</td>
+        <td class="text-center" [ngClass]="{'text-danger':item.cancelledSess>0,'text-secondary':item.cancelledSess==0}">{{item.cancelledSess}}</td>
+        <td>
+          <div class="d-flex">
+            <button class="m-btn-sm-mini-primary"><i class="fa fa-pencil-square-o"></i></button>
+            <button class="m-btn-sm-mini-danger"><i class="fa fa-trash"></i></button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
